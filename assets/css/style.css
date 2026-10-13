@@ -439,3 +439,344 @@ button {
 .announcement-action a:hover i {
     transform: translateX(5px); /* تحريك السهم لليمين عند التمرير */
 }
+
+/* ==========================================================================
+   Section Header (Reusable Component)
+   ========================================================================== */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.section-tag {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+.view-all-link {
+    font-weight: 600;
+    color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+    transition: color var(--transition-fast);
+}
+
+.view-all-link i {
+    transition: transform var(--transition-fast);
+}
+
+.view-all-link:hover {
+    color: var(--primary-color);
+}
+
+.view-all-link:hover i {
+    transform: translateX(5px);
+}
+
+/* ==========================================================================
+   5. Latest News Section
+   ========================================================================== */
+.latest-news-section {
+    padding: 80px 0;
+    background-color: var(--bg-gray);
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.news-card {
+    background-color: var(--bg-light);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.news-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.news-image-wrapper {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.news-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image-wrapper img {
+    transform: scale(1.06);
+}
+
+.news-category {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+}
+
+.news-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.news-date {
+    font-size: 0.8rem;
+    color: #777777;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.news-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.news-title a {
+    color: var(--text-dark);
+    transition: color var(--transition-fast);
+}
+
+.news-title a:hover {
+    color: var(--secondary-color);
+}
+
+.news-excerpt {
+    font-size: 0.9rem;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 22px;
+    flex-grow: 1;
+}
+
+.news-read-more {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;
+}
+
+.news-read-more i {
+    transition: transform var(--transition-fast);
+}
+
+.news-read-more:hover {
+    color: var(--primary-color);
+}
+
+.news-read-more:hover i {
+    transform: translateX(5px);
+}
+
+
+/* Small Button Modifier */
+.btn-sm {
+    padding: 8px 18px;
+    font-size: 0.88rem;
+}
+
+/* ==========================================================================
+   6. Upcoming Events Section
+   ========================================================================== */
+.upcoming-events-section {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+}
+
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.event-card {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid transparent;
+    border-radius: 8px;
+    padding: 22px 28px;
+    transition: all var(--transition-fast);
+}
+
+.event-card:hover {
+    border-left-color: var(--secondary-color);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    transform: translateX(6px);
+}
+
+.event-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    padding: 12px;
+    background-color: var(--bg-gray);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    text-align: center;
+    margin-right: 25px;
+    transition: all var(--transition-fast);
+}
+
+.event-card:hover .event-date {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.event-day {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1;
+    transition: color var(--transition-fast);
+}
+
+.event-card:hover .event-day {
+    color: var(--text-light);
+}
+
+.event-month {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    letter-spacing: 1px;
+    margin-top: 4px;
+    transition: color var(--transition-fast);
+}
+
+.event-card:hover .event-month {
+    color: var(--accent-color);
+}
+
+.event-year {
+    font-size: 0.75rem;
+    color: #888888;
+    margin-top: 2px;
+    transition: color var(--transition-fast);
+}
+
+.event-card:hover .event-year {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.event-info {
+    flex: 1;
+}
+
+.event-sport {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.event-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.event-title a {
+    color: var(--text-dark);
+    transition: color var(--transition-fast);
+}
+
+.event-title a:hover {
+    color: var(--secondary-color);
+}
+
+.event-meta {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 0.88rem;
+    color: #666666;
+}
+
+.event-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.event-meta i {
+    color: var(--secondary-color);
+}
+
+.event-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.event-status {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 3px 10px;
+    border-radius: 12px;
+}
+
+.status-open {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+}
+
+.status-upcoming {
+    background-color: #E3F2FD;
+    color: #1565C0;
+}
