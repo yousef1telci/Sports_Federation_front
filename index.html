@@ -59,9 +59,14 @@
                 </ul>
             </nav>
 
-            <!-- Search Icon -->
-            <div class="header-search">
-                <button aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <div class="header-search">
+                    <button aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -254,10 +259,138 @@
     </main>
 
     <!-- 7. Official Sponsors -->
-    <section class="sponsors-section"></section>
+    <section class="sponsors-section">
+        <div class="container">
+            <div class="sponsors-header">
+                <span class="section-tag">Trusted Partners</span>
+                <h2 class="sponsors-title">Official Federation Sponsors</h2>
+            </div>
+            
+            <div class="sponsors-grid">
+                <a href="#" class="sponsor-item" aria-label="Apex Sports">
+                    <i class="fa-solid fa-bolt-lightning sponsor-icon"></i>
+                    <span class="sponsor-name">APEX SPORTS</span>
+                </a>
+                <a href="#" class="sponsor-item" aria-label="GlobeAir Global">
+                    <i class="fa-solid fa-plane-departure sponsor-icon"></i>
+                    <span class="sponsor-name">GLOBEAIR</span>
+                </a>
+                <a href="#" class="sponsor-item" aria-label="Nexus Technologies">
+                    <i class="fa-solid fa-microchip sponsor-icon"></i>
+                    <span class="sponsor-name">NEXUS TECH</span>
+                </a>
+                <a href="#" class="sponsor-item" aria-label="Titan Energy">
+                    <i class="fa-solid fa-fire-flame-curved sponsor-icon"></i>
+                    <span class="sponsor-name">TITAN ENERGY</span>
+                </a>
+                <a href="#" class="sponsor-item" aria-label="Valor Bank">
+                    <i class="fa-solid fa-building-columns sponsor-icon"></i>
+                    <span class="sponsor-name">VALOR BANK</span>
+                </a>
+                <a href="#" class="sponsor-item" aria-label="Summit Media">
+                    <i class="fa-solid fa-satellite-dish sponsor-icon"></i>
+                    <span class="sponsor-name">SUMMIT MEDIA</span>
+                </a>
+            </div>
+
+            <div class="sponsors-footer-text">
+                <p>Interested in joining our global partnership network? <a href="#">Become an Official Partner <i class="fa-solid fa-arrow-right"></i></a></p>
+            </div>
+        </div>
+    </section>
 
     <!-- 8. Mega Footer -->
-    <footer class="mega-footer"></footer>
+    <footer class="mega-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: About & Logo -->
+                <div class="footer-col footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <div class="logo-text">
+                            <strong>INT. SPORTS</strong>
+                            <span>FEDERATION</span>
+                        </div>
+                    </a>
+                    <p class="footer-desc">
+                        The world governing body committed to fostering athletic integrity, youth development, and global sporting championships across all disciplines.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Governance & Rules</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Constitution & Bylaws</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Code of Ethics</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Anti-Doping Regulations</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Dispute Resolution</a></li>
+                        <li><a href="#"><i class="fa-solid fa-angle-right"></i> Annual Reports</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Info -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Headquarters</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Maison du Sport International, Av. de Rhodanie 54, Lausanne, Switzerland</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+41 21 612 34 56</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>contact@sportsfederation.org</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>Mon - Fri: 08:30 - 17:30 CET</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Official Newsletter</h3>
+                    <p class="footer-newsletter-text">
+                        Subscribe to receive official communiques, tournament schedules, and press releases directly to your inbox.
+                    </p>
+                    <form class="footer-newsletter-form" onsubmit="event.preventDefault();">
+                        <div class="newsletter-input-group">
+                            <input type="email" placeholder="Your official email address..." required aria-label="Email address">
+                            <button type="submit" class="btn btn-primary btn-newsletter" aria-label="Subscribe">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2026 International Sports Federation. All rights reserved.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <span class="divider">|</span>
+                    <a href="#">Terms of Service</a>
+                    <span class="divider">|</span>
+                    <a href="#">Cookie Settings</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Main JS -->
     <script src="assets/js/script.js"></script>

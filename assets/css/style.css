@@ -259,6 +259,13 @@ button {
     padding-left: 25px; /* حركة بسيطة للنص عند التمرير */
 }
 
+/* Header Actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
 /* Search Icon */
 .header-search button {
     font-size: 1.2rem;
@@ -267,6 +274,19 @@ button {
 }
 
 .header-search button:hover {
+    color: var(--secondary-color);
+}
+
+/* Mobile Menu Button - Hidden on Desktop */
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    padding: 6px;
+    transition: color var(--transition-fast);
+}
+
+.mobile-menu-btn:hover {
     color: var(--secondary-color);
 }
 
@@ -779,4 +799,619 @@ button {
 .status-upcoming {
     background-color: #E3F2FD;
     color: #1565C0;
+}
+
+
+/* ==========================================================================
+   7. Official Sponsors Section
+   ========================================================================== */
+.sponsors-section {
+    padding: 70px 0;
+    background-color: var(--bg-gray);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sponsors-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sponsors-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
+
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    align-items: center;
+}
+
+.sponsor-item {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 24px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #777777;
+    transition: all var(--transition-fast);
+}
+
+.sponsor-item:hover {
+    color: var(--primary-color);
+    border-color: var(--secondary-color);
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transform: translateY(-4px);
+}
+
+.sponsor-icon {
+    font-size: 2rem;
+    transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.sponsor-item:hover .sponsor-icon {
+    color: var(--secondary-color);
+    transform: scale(1.12);
+}
+
+.sponsor-name {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.sponsors-footer-text {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 0.92rem;
+    color: #666666;
+}
+
+.sponsors-footer-text a {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-left: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color var(--transition-fast);
+}
+
+.sponsors-footer-text a:hover {
+    color: var(--primary-color);
+}
+
+.sponsors-footer-text a i {
+    transition: transform var(--transition-fast);
+}
+
+.sponsors-footer-text a:hover i {
+    transform: translateX(4px);
+}
+
+
+/* ==========================================================================
+   8. Mega Footer Section
+   ========================================================================== */
+.mega-footer {
+    background-color: #002244; /* كحلي داكن مؤسسي بتباين عالي */
+    color: #c9d6df;
+    padding-top: 80px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.2fr 1.2fr;
+    gap: 40px;
+    padding-bottom: 60px;
+}
+
+/* Column 1: About & Logo */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+.footer-logo i {
+    font-size: 2.2rem;
+    color: var(--accent-color);
+}
+
+.footer-desc {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: #a0aec0;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-socials a {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    transition: all var(--transition-fast);
+}
+
+.footer-socials a:hover {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Titles for Footer Columns */
+.footer-title {
+    color: #ffffff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Column 2: Quick Links */
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: #c9d6df;
+    font-size: 0.92rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all var(--transition-fast);
+}
+
+.footer-links a i {
+    font-size: 0.75rem;
+    color: var(--secondary-color);
+    transition: transform var(--transition-fast);
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+.footer-links a:hover i {
+    color: var(--accent-color);
+}
+
+/* Column 3: Contact Info */
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: #c9d6df;
+}
+
+.footer-contact i {
+    color: var(--accent-color);
+    font-size: 1rem;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+/* Column 4: Newsletter */
+.footer-newsletter-text {
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    color: #a0aec0;
+}
+
+.newsletter-input-group {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.newsletter-input-group input {
+    width: 100%;
+    padding: 14px 50px 14px 18px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.06);
+    color: #ffffff;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.newsletter-input-group input::placeholder {
+    color: #8c9ba5;
+}
+
+.newsletter-input-group input:focus {
+    border-color: var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-newsletter {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    padding: 0 18px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-newsletter i {
+    margin: 0;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #8a9ba8;
+}
+
+.footer-bottom-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-bottom-links a {
+    color: #8a9ba8;
+}
+
+.footer-bottom-links a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom-links .divider {
+    color: rgba(255, 255, 255, 0.15);
+}
+
+
+/* ==========================================================================
+   Responsive Design (Desktop-First Media Queries)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Tablets and Medium Screens (max-width: 992px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+    /* Show Hamburger Menu Button */
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    /* Convert Desktop Navbar into a Mobile Drawer */
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-light);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid var(--border-color);
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        transition: all var(--transition-fast);
+        z-index: 99;
+    }
+
+    .main-nav.active {
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 10px 0;
+    }
+
+    .nav-list > li {
+        width: 100%;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-list > li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-list > li > a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 14px 25px;
+    }
+
+    .nav-list > li > a::after {
+        display: none; /* Hide hover underline on touch devices */
+    }
+
+    /* Mobile Dropdown Submenu */
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border-top: none;
+        background-color: var(--bg-gray);
+        display: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        padding: 5px 0 5px 20px;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown > a i {
+        transition: transform var(--transition-fast);
+    }
+
+    .dropdown.active > a i {
+        transform: rotate(180deg);
+    }
+
+    /* Hero Section */
+    .hero-section {
+        height: auto;
+        min-height: 480px;
+        padding: 120px 0 80px;
+    }
+
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    /* News Grid (2 Columns) */
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    /* Sponsors Grid (3 Columns) */
+    .sponsors-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    /* Mega Footer (2 Columns) */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Devices and Small Tablets (max-width: 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    /* Top Bar */
+    .top-bar-inner {
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+    }
+
+    /* Hero Section */
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Announcements Section */
+    .announcements-section {
+        margin-top: -20px;
+    }
+
+    .announcement-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 15px 20px;
+    }
+
+    .announcement-badge {
+        margin-right: 0;
+    }
+
+    .announcement-action {
+        margin-left: 0;
+        align-self: flex-start;
+    }
+
+    /* Section Headers */
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    /* News Grid (1 Column) */
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Upcoming Events List */
+    .event-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 18px 20px;
+    }
+
+    .event-card:hover {
+        transform: translateY(-4px); /* Vertical lift on mobile */
+    }
+
+    .event-date {
+        margin-right: 0;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 15px;
+    }
+
+    .event-day {
+        font-size: 1.4rem;
+    }
+
+    .event-month,
+    .event-year {
+        margin-top: 0;
+        margin-left: 6px;
+    }
+
+    .event-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .event-actions {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+
+    /* Sponsors Grid (2 Columns) */
+    .sponsors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Mega Footer (1 Column) */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer-bottom-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Small Phones (max-width: 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-badge {
+        font-size: 0.75rem;
+    }
+
+    .sponsors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sponsors-title {
+        font-size: 1.6rem;
+    }
+
+    /* Newsletter Form Stacking */
+    .newsletter-input-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newsletter-input-group input {
+        padding-right: 18px;
+    }
+
+    .btn-newsletter {
+        position: static;
+        width: 100%;
+        height: 44px;
+    }
 }
