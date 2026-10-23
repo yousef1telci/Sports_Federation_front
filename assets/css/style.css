@@ -2179,6 +2179,801 @@ button {
 
 
 /* ==========================================================================
+   News & Media Hub - Section 1: Featured Story
+   ========================================================================== */
+.featured-story-section {
+    padding: 70px 0 35px;
+    background-color: var(--bg-light);
+}
+
+.featured-story-card {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: all var(--transition-fast);
+}
+
+.featured-story-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.featured-img-wrap {
+    position: relative;
+    min-height: 380px;
+    overflow: hidden;
+}
+
+.featured-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.featured-story-card:hover .featured-img-wrap img {
+    transform: scale(1.04);
+}
+
+.featured-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+    font-size: 0.8rem;
+    font-weight: 800;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.featured-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.featured-category {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.featured-title {
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1.3;
+    margin-bottom: 14px;
+}
+
+.featured-title a {
+    color: inherit;
+    transition: color var(--transition-fast);
+}
+
+.featured-title a:hover {
+    color: var(--secondary-color);
+}
+
+.featured-excerpt {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.featured-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 0.85rem;
+    color: #777777;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.featured-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ==========================================================================
+   News & Media Hub - Section 2: News Grid & Pagination
+   ========================================================================== */
+.news-hub-section {
+    padding: 50px 0 80px;
+    background-color: var(--bg-gray);
+}
+
+.news-grid-extended {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.pagination-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.pagination-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.pagination-btn.active {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border-color: var(--primary-color);
+}
+
+.pagination-btn.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pagination-ellipsis {
+    padding: 0 6px;
+    color: #888888;
+}
+
+/* ==========================================================================
+   News & Media Hub - Section 3: Official Press Releases
+   ========================================================================== */
+.press-releases-section {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+}
+
+.press-sub-tag {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #C62828;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.press-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.press-item {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-gray);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 22px 28px;
+    transition: all var(--transition-fast);
+}
+
+.press-item:hover {
+    border-color: var(--secondary-color);
+    background-color: var(--bg-light);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    transform: translateX(5px);
+}
+
+.press-date-box {
+    min-width: 80px;
+    text-align: center;
+    border-right: 2px solid var(--border-color);
+    padding-right: 22px;
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-day {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.p-month {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-top: 3px;
+}
+
+.p-year {
+    font-size: 0.75rem;
+    color: #888888;
+}
+
+.press-content {
+    flex: 1;
+}
+
+.press-ref {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #888888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.press-headline {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.press-headline a {
+    color: var(--text-dark);
+    transition: color var(--transition-fast);
+}
+
+.press-headline a:hover {
+    color: var(--secondary-color);
+}
+
+.press-summary {
+    font-size: 0.88rem;
+    color: #666666;
+    line-height: 1.5;
+}
+
+.press-action {
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   News & Media Hub - Section 4: Media Resources & Accreditation
+   ========================================================================== */
+.media-resources-section {
+    padding: 80px 0;
+    background-color: var(--bg-gray);
+}
+
+.media-resources-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.resource-card {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 32px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all var(--transition-fast);
+}
+
+.resource-card:hover {
+    border-color: var(--secondary-color);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    transform: translateY(-4px);
+}
+
+.resource-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 8px;
+    background-color: rgba(0, 51, 102, 0.08);
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.resource-card:hover .resource-icon {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.resource-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.resource-desc {
+    font-size: 0.9rem;
+    color: #666666;
+    line-height: 1.6;
+    margin-bottom: 22px;
+    flex-grow: 1;
+}
+
+
+/* ==========================================================================
+   Contact Page - Section 1: Quick Channels
+   ========================================================================== */
+.contact-channels-section {
+    padding: 70px 0 30px;
+    background-color: var(--bg-light);
+}
+
+.channels-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.channel-card {
+    background-color: var(--bg-gray);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 26px 22px;
+    transition: all var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.channel-card:hover {
+    border-color: var(--secondary-color);
+    background-color: var(--bg-light);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transform: translateY(-4px);
+}
+
+.highlight-channel {
+    border-left: 4px solid var(--accent-color);
+    background-color: rgba(255, 215, 0, 0.04);
+}
+
+.channel-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: rgba(0, 51, 102, 0.08);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.channel-card:hover .channel-icon {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.channel-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.channel-text {
+    font-size: 0.88rem;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 14px;
+    flex-grow: 1;
+}
+
+.channel-link {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color var(--transition-fast);
+}
+
+.channel-link:hover {
+    color: var(--primary-color);
+}
+
+.channel-note {
+    font-size: 0.8rem;
+    color: #777777;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ==========================================================================
+   Contact Page - Section 2: Contact Form & Directory
+   ========================================================================== */
+.contact-main-section {
+    padding: 50px 0 80px;
+    background-color: var(--bg-gray);
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.contact-form-wrapper {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.form-intro {
+    margin-bottom: 25px;
+}
+
+.form-desc {
+    font-size: 0.95rem;
+    color: #666666;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+.form-alert {
+    background-color: #E8F5E9;
+    border: 1px solid #A5D6A7;
+    color: #1B5E20;
+    padding: 16px 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+.form-alert i {
+    font-size: 1.8rem;
+    color: #2E7D32;
+    flex-shrink: 0;
+}
+
+.form-alert strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.form-alert p {
+    font-size: 0.88rem;
+    margin: 0;
+}
+
+.official-contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.req {
+    color: #C62828;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    font-family: inherit;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(0, 80, 158, 0.12);
+}
+
+.form-checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: #666666;
+    line-height: 1.5;
+}
+
+.form-checkbox-group input {
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.form-checkbox-group a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.btn-submit-form {
+    align-self: flex-start;
+    padding: 14px 32px;
+    font-size: 1rem;
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.contact-directory-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.directory-card {
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.directory-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--bg-gray);
+}
+
+.directory-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.directory-list li {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.directory-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.dept-name {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.dept-email {
+    font-size: 0.86rem;
+    color: var(--secondary-color);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color var(--transition-fast);
+}
+
+.dept-email:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.hours-card {
+    background-color: var(--bg-light);
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.88rem;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--border-color);
+    color: #555555;
+}
+
+.hours-row strong {
+    color: var(--primary-color);
+}
+
+.hours-row em {
+    color: #888888;
+    font-style: normal;
+}
+
+.hours-note {
+    font-size: 0.8rem;
+    color: #777777;
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ==========================================================================
+   Contact Page - Section 3: Headquarters Location Visual
+   ========================================================================== */
+.headquarters-location-section {
+    padding: 80px 0;
+    background-color: var(--bg-light);
+}
+
+.location-banner {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+.location-details {
+    padding: 40px;
+}
+
+.location-title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+}
+
+.location-desc {
+    font-size: 0.95rem;
+    color: #555555;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.transport-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.transport-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background-color: var(--bg-gray);
+    padding: 14px 18px;
+    border-radius: 6px;
+    border-left: 3px solid var(--secondary-color);
+}
+
+.transport-item i {
+    font-size: 1.3rem;
+    color: var(--secondary-color);
+    margin-top: 2px;
+}
+
+.transport-item strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--primary-color);
+}
+
+.transport-item span {
+    font-size: 0.85rem;
+    color: #666666;
+}
+
+.visitor-protocol {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: #666666;
+    background-color: rgba(0, 51, 102, 0.04);
+    padding: 14px 18px;
+    border-radius: 6px;
+}
+
+.visitor-protocol i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-top: 2px;
+}
+
+.location-visual {
+    position: relative;
+    overflow: hidden;
+    min-height: 380px;
+}
+
+.location-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.location-badge-over {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 31, 63, 0.88);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    backdrop-filter: blur(4px);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* ==========================================================================
    Responsive Design (Desktop-First Media Queries)
    ========================================================================== */
 
@@ -2332,6 +3127,48 @@ button {
         width: 100%;
         overflow-x: auto;
         flex-wrap: nowrap;
+    }
+
+    /* News Hub Tablet */
+    .featured-story-card {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-img-wrap {
+        min-height: 280px;
+        height: 280px;
+    }
+
+    .featured-content {
+        padding: 30px;
+    }
+
+    .news-grid-extended {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .media-resources-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    /* Contact Page Tablet */
+    .channels-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .location-banner {
+        grid-template-columns: 1fr;
+    }
+
+    .location-visual {
+        min-height: 280px;
+        height: 280px;
     }
 }
 
@@ -2557,6 +3394,81 @@ button {
         padding: 12px 14px;
         font-size: 0.85rem;
     }
+
+    /* News Hub Mobile */
+    .featured-title {
+        font-size: 1.35rem;
+    }
+
+    .news-grid-extended {
+        grid-template-columns: 1fr;
+    }
+
+    .press-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 18px 20px;
+    }
+
+    .press-date-box {
+        border-right: none;
+        border-bottom: 2px solid var(--border-color);
+        padding-right: 0;
+        padding-bottom: 10px;
+        margin-right: 0;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .p-day {
+        font-size: 1.3rem;
+    }
+
+    .p-month,
+    .p-year {
+        margin-top: 0;
+        margin-left: 6px;
+    }
+
+    .press-action {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .press-action .btn {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .media-resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Page Mobile */
+    .channels-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .contact-form-wrapper {
+        padding: 25px 20px;
+    }
+
+    .location-details {
+        padding: 25px 20px;
+    }
+
+    .btn-submit-form {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 /* --------------------------------------------------------------------------
@@ -2618,5 +3530,23 @@ button {
 
     .nation-cell strong {
         font-size: 0.9rem;
+    }
+
+    /* News Hub Small Phones */
+    .pagination-wrap {
+        gap: 4px;
+    }
+
+    .pagination-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 0.82rem;
+    }
+
+    /* Contact Page Small Phones */
+    .hours-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
     }
 }

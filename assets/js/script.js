@@ -125,24 +125,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================================================
-    // 6. Competitions Calendar Filter (Live / Upcoming / Completed)
+    // 6. Generic Card Filtering (Competitions & News Hub)
     // ==========================================================================
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const compCards = document.querySelectorAll('.comp-card');
+    function setupFilter(containerId, cardSelector) {
+        const filterContainer = document.getElementById(containerId);
+        if (!filterContainer) return;
 
-    if (filterButtons.length > 0 && compCards.length > 0) {
-        filterButtons.forEach((btn) => {
+        const buttons = filterContainer.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll(cardSelector);
+
+        buttons.forEach((btn) => {
             btn.addEventListener('click', () => {
-                // Update active button state
-                filterButtons.forEach((b) => b.classList.remove('active'));
+                buttons.forEach((b) => b.classList.remove('active'));
                 btn.classList.add('active');
 
                 const selectedFilter = btn.getAttribute('data-filter');
 
-                compCards.forEach((card) => {
+                cards.forEach((card) => {
                     const cardCategory = card.getAttribute('data-category');
                     if (selectedFilter === 'all' || cardCategory === selectedFilter) {
-                        card.style.display = 'block';
+                        card.style.display = '';
                         card.style.opacity = '0';
                         setTimeout(() => {
                             card.style.transition = 'opacity 0.3s ease';
@@ -156,6 +158,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Initialize filters for Competitions & News
+    setupFilter('compFilters', '.comp-card');
+    setupFilter('newsFilters', '#newsGridExtended .news-card');
+
     // ==========================================================================
     // 7. World Rankings Category Tabs
     // ==========================================================================
@@ -166,6 +172,41 @@ document.addEventListener('DOMContentLoaded', () => {
                 rankTabs.forEach((t) => t.classList.remove('active'));
                 tab.classList.add('active');
             });
+        });
+    }
+
+    // ==========================================================================
+    // 8. Pagination Buttons Interaction
+    // ==========================================================================
+    const paginationButtons = document.querySelectorAll('.pagination-btn:not(.disabled)');
+    if (paginationButtons.length > 0) {
+        paginationButtons.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                const isNav = btn.querySelector('i');
+                if (!isNav) {
+                    paginationButtons.forEach((b) => b.classList.remove('active'));
+                    btn.classList.add('active');
+                }
+            });
+        });
+    }
+
+    // ==========================================================================
+    // 9. Official Contact Form Submission Handling
+    // ==========================================================================
+    const contactForm = document.getElementById('contactForm');
+    const formAlert = document.getElementById('formAlert');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            if (formAlert) {
+                formAlert.style.display = 'flex';
+                formAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            contactForm.reset();
         });
     }
 });
