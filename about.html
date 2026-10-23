@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Federation & Governance - International Sports Federation</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- 1. Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="top-bar-actions">
+                <a href="#" class="lang-switch">TR</a>
+                <span class="divider">|</span>
+                <a href="#" class="login-link"><i class="fa-solid fa-user"></i> Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Main Header & Navbar -->
+    <header class="main-header">
+        <div class="container header-inner">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div class="logo-text">
+                    <strong>INT. SPORTS</strong>
+                    <span>FEDERATION</span>
+                </div>
+            </a>
+
+            <!-- Navigation -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="competitions.html">Competitions <i class="fa-solid fa-chevron-down fa-sm"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="competitions.html">Calendar & Events</a></li>
+                            <li><a href="competitions.html#rankings">World Rankings</a></li>
+                            <li><a href="competitions.html#rules">Rules & Regulations</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="about.html" class="active">Federation <i class="fa-solid fa-chevron-down fa-sm"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About & History</a></li>
+                            <li><a href="about.html#leadership">Executive Board</a></li>
+                            <li><a href="about.html#governance">Governance & Integrity</a></li>
+                            <li><a href="about.html#members">Member Associations</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="news.html">News & Media <i class="fa-solid fa-chevron-down fa-sm"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="news.html">Latest Stories</a></li>
+                            <li><a href="news.html#press">Press Releases</a></li>
+                            <li><a href="news.html#resources">Media Resources</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <div class="header-search">
+                    <button id="searchOpenBtn" aria-label="Open Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header Banner / Breadcrumbs -->
+    <section class="page-hero">
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="bc-sep"><i class="fa-solid fa-chevron-right fa-xs"></i></span>
+                <span>Federation</span>
+                <span class="bc-sep"><i class="fa-solid fa-chevron-right fa-xs"></i></span>
+                <span class="bc-current">About & Governance</span>
+            </nav>
+            <h1 class="page-title">About the Federation</h1>
+            <p class="page-lead">
+                The global governing authority fostering athletic excellence, Olympic values, and sporting integrity across our worldwide membership.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Section 1: Overview & President's Welcome -->
+        <section class="about-overview-section" id="overview">
+            <div class="container">
+                <div class="overview-grid">
+                    <div class="president-card">
+                        <div class="president-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Dr. Marcus Vance, President">
+                            <span class="president-badge">President</span>
+                        </div>
+                        <div class="president-quote">
+                            <i class="fa-solid fa-quote-left quote-icon"></i>
+                            <p>"Sport unites nations, transcends borders, and brings out the very best in human resilience and fair play."</p>
+                            <strong>Dr. Marcus Vance</strong>
+                            <span>President, International Sports Federation</span>
+                        </div>
+                    </div>
+
+                    <div class="overview-content">
+                        <span class="section-tag">Our Vision & Mandate</span>
+                        <h2 class="section-title">Governing with Integrity, Inspiring Generations</h2>
+                        <p class="lead-text">
+                            Founded in 1968, the International Sports Federation represents 142 national member associations across five continental zones. We are recognized by the International Olympic Committee (IOC) as the sole worldwide governing authority.
+                        </p>
+                        <p class="body-text">
+                            Our primary mission is to promote, organize, and develop international championships, ensure strict adherence to anti-doping codes, and empower athletes from grassroots to the podium.
+                        </p>
+
+                        <!-- Key Pillars -->
+                        <div class="pillars-grid">
+                            <div class="pillar-item">
+                                <div class="pillar-icon"><i class="fa-solid fa-medal"></i></div>
+                                <div>
+                                    <h4>Olympic Excellence</h4>
+                                    <p>Delivering premier world championships and pathways to the Olympic Games.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <div class="pillar-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                                <div>
+                                    <h4>Integrity & Fair Play</h4>
+                                    <p>Zero tolerance for doping, discrimination, or manipulation of competitions.</p>
+                                </div>
+                            </div>
+                            <div class="pillar-item">
+                                <div class="pillar-icon"><i class="fa-solid fa-earth-americas"></i></div>
+                                <div>
+                                    <h4>Global Development</h4>
+                                    <p>Investing in coaching academies, youth pathways, and emerging nations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Federation Numbers Strip -->
+                <div class="stats-strip">
+                    <div class="stat-box">
+                        <span class="stat-number">142</span>
+                        <span class="stat-label">Member Federations</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Continental Zones</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">65+</span>
+                        <span class="stat-label">Annual Sanctioned Events</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">58 Yrs</span>
+                        <span class="stat-label">Promoting Global Sport</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Executive Board & Leadership -->
+        <section class="leadership-section" id="leadership">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-tag">Governance Body</span>
+                        <h2 class="section-title">Executive Board (2024–2028)</h2>
+                    </div>
+                    <span class="board-term-note"><i class="fa-regular fa-calendar-check"></i> Elected by the General Assembly</span>
+                </div>
+
+                <div class="board-grid">
+                    <!-- Board Member 1 -->
+                    <div class="board-card">
+                        <div class="board-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Dr. Marcus Vance">
+                            <span class="board-country"><i class="fa-solid fa-location-dot"></i> Switzerland</span>
+                        </div>
+                        <div class="board-info">
+                            <span class="board-role">President</span>
+                            <h3 class="board-name">Dr. Marcus Vance</h3>
+                            <p class="board-bio">Elected in 2020. Leading governance modernization, athlete representation, and Olympic program expansion.</p>
+                        </div>
+                    </div>
+
+                    <!-- Board Member 2 -->
+                    <div class="board-card">
+                        <div class="board-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop" alt="Elena Rostova">
+                            <span class="board-country"><i class="fa-solid fa-location-dot"></i> Sweden</span>
+                        </div>
+                        <div class="board-info">
+                            <span class="board-role">1st Vice President</span>
+                            <h3 class="board-name">Elena Rostova</h3>
+                            <p class="board-bio">Former Olympic medalist and chair of the International Competitions & Rules Commission.</p>
+                        </div>
+                    </div>
+
+                    <!-- Board Member 3 -->
+                    <div class="board-card">
+                        <div class="board-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop" alt="Kenji Takahashi">
+                            <span class="board-country"><i class="fa-solid fa-location-dot"></i> Japan</span>
+                        </div>
+                        <div class="board-info">
+                            <span class="board-role">Vice President</span>
+                            <h3 class="board-name">Kenji Takahashi</h3>
+                            <p class="board-bio">Overseeing Asia-Pacific regional federation growth and international broadcast development.</p>
+                        </div>
+                    </div>
+
+                    <!-- Board Member 4 -->
+                    <div class="board-card">
+                        <div class="board-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800&auto=format&fit=crop" alt="Sarah Jenkins">
+                            <span class="board-country"><i class="fa-solid fa-location-dot"></i> Great Britain</span>
+                        </div>
+                        <div class="board-info">
+                            <span class="board-role">Secretary General</span>
+                            <h3 class="board-name">Sarah Jenkins</h3>
+                            <p class="board-bio">Directs daily federation headquarters operations in Lausanne and statutory legal affairs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Board Member 5 -->
+                    <div class="board-card">
+                        <div class="board-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop" alt="David Miller">
+                            <span class="board-country"><i class="fa-solid fa-location-dot"></i> Canada</span>
+                        </div>
+                        <div class="board-info">
+                            <span class="board-role">Treasurer & Finance Chair</span>
+                            <h3 class="board-name">David Miller</h3>
+                            <p class="board-bio">Chartered financial executive ensuring fiscal stability, independent auditing, and grants allocation.</p>
+                        </div>
+                    </div>
+
+                    <!-- Board Member 6 -->
+                    <div class="board-card">
+                        <div class="board-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" alt="Amara Diallo">
+                            <span class="board-country"><i class="fa-solid fa-location-dot"></i> Senegal</span>
+                        </div>
+                        <div class="board-info">
+                            <span class="board-role">Athletes' Commission Chair</span>
+                            <h3 class="board-name">Amara Diallo</h3>
+                            <p class="board-bio">Elected directly by active international athletes to represent competitor welfare and career transition.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Governance & Official Regulations -->
+        <section class="governance-section" id="governance">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-tag">Transparency & Rules</span>
+                        <h2 class="section-title">Official Statutes & Governance Documents</h2>
+                    </div>
+                    <span class="governance-sub"><i class="fa-solid fa-shield-halved"></i> WADA & IOC Compliant</span>
+                </div>
+
+                <div class="docs-grid">
+                    <!-- Document 1 -->
+                    <div class="doc-card">
+                        <div class="doc-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <div class="doc-content">
+                            <span class="doc-type">Statute</span>
+                            <h3 class="doc-title">Federation Constitution & Bylaws</h3>
+                            <p class="doc-desc">The official constitutional rules, membership procedures, and General Assembly powers (2026 Edition).</p>
+                            <div class="doc-meta">
+                                <span>PDF • 4.2 MB</span>
+                                <a href="#" class="btn-doc-download"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Document 2 -->
+                    <div class="doc-card">
+                        <div class="doc-icon"><i class="fa-solid fa-file-shield"></i></div>
+                        <div class="doc-content">
+                            <span class="doc-type">Anti-Doping</span>
+                            <h3 class="doc-title">World Anti-Doping Regulations</h3>
+                            <p class="doc-desc">Testing protocols, prohibited list adherence, and Athlete Biological Passport requirements.</p>
+                            <div class="doc-meta">
+                                <span>PDF • 3.1 MB</span>
+                                <a href="#" class="btn-doc-download"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Document 3 -->
+                    <div class="doc-card">
+                        <div class="doc-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                        <div class="doc-content">
+                            <span class="doc-type">Ethics</span>
+                            <h3 class="doc-title">Code of Ethics & Safeguarding</h3>
+                            <p class="doc-desc">Guidelines for fair competition, harassment prevention, and whistleblower reporting mechanisms.</p>
+                            <div class="doc-meta">
+                                <span>PDF • 2.6 MB</span>
+                                <a href="#" class="btn-doc-download"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Document 4 -->
+                    <div class="doc-card">
+                        <div class="doc-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                        <div class="doc-content">
+                            <span class="doc-type">Finance</span>
+                            <h3 class="doc-title">Annual Audited Financial Report 2025</h3>
+                            <p class="doc-desc">Full transparency disclosures, revenue distribution, prize funding, and development expenditure.</p>
+                            <div class="doc-meta">
+                                <span>PDF • 5.8 MB</span>
+                                <a href="#" class="btn-doc-download"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Member Associations & Continental Zones -->
+        <section class="members-section" id="members">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-tag">Global Footprint</span>
+                        <h2 class="section-title">Continental Confederations & Member Associations</h2>
+                    </div>
+                </div>
+
+                <div class="zones-grid">
+                    <!-- Zone 1 -->
+                    <div class="zone-card">
+                        <div class="zone-header">
+                            <i class="fa-solid fa-earth-europe zone-icon"></i>
+                            <div>
+                                <h3 class="zone-name">European Confederation</h3>
+                                <span class="zone-members">51 Member Nations</span>
+                            </div>
+                        </div>
+                        <p class="zone-desc">Coordinates European Championships, club league licenses, and continental junior cups.</p>
+                        <a href="#" class="zone-link">View Member Associations <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Zone 2 -->
+                    <div class="zone-card">
+                        <div class="zone-header">
+                            <i class="fa-solid fa-earth-americas zone-icon"></i>
+                            <div>
+                                <h3 class="zone-name">Pan-American Confederation</h3>
+                                <span class="zone-members">38 Member Nations</span>
+                            </div>
+                        </div>
+                        <p class="zone-desc">Oversees North, Central, and South American championships and Olympic continental qualifiers.</p>
+                        <a href="#" class="zone-link">View Member Associations <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Zone 3 -->
+                    <div class="zone-card">
+                        <div class="zone-header">
+                            <i class="fa-solid fa-earth-asia zone-icon"></i>
+                            <div>
+                                <h3 class="zone-name">Asia-Pacific Confederation</h3>
+                                <span class="zone-members">34 Member Nations</span>
+                            </div>
+                        </div>
+                        <p class="zone-desc">Drives high-growth youth development tournaments across Asia and Oceania.</p>
+                        <a href="#" class="zone-link">View Member Associations <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Zone 4 -->
+                    <div class="zone-card">
+                        <div class="zone-header">
+                            <i class="fa-solid fa-earth-africa zone-icon"></i>
+                            <div>
+                                <h3 class="zone-name">African Confederation</h3>
+                                <span class="zone-members">19 Member Nations</span>
+                            </div>
+                        </div>
+                        <p class="zone-desc">Focused on expanding training facilities, coaching accreditations, and continental games.</p>
+                        <a href="#" class="zone-link">View Member Associations <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 8. Mega Footer -->
+    <footer class="mega-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: About & Logo -->
+                <div class="footer-col footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <div class="logo-text">
+                            <strong>INT. SPORTS</strong>
+                            <span>FEDERATION</span>
+                        </div>
+                    </a>
+                    <p class="footer-desc">
+                        The world governing body committed to fostering athletic integrity, youth development, and global sporting championships across all disciplines.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Governance & Rules</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> Constitution & Bylaws</a></li>
+                        <li><a href="about.html#governance"><i class="fa-solid fa-angle-right"></i> Code of Ethics</a></li>
+                        <li><a href="about.html#governance"><i class="fa-solid fa-angle-right"></i> Anti-Doping Regulations</a></li>
+                        <li><a href="about.html#leadership"><i class="fa-solid fa-angle-right"></i> Executive Board</a></li>
+                        <li><a href="about.html#governance"><i class="fa-solid fa-angle-right"></i> Annual Reports</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Info -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Headquarters</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Maison du Sport International, Av. de Rhodanie 54, Lausanne, Switzerland</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+41 21 612 34 56</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>contact@sportsfederation.org</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>Mon - Fri: 08:30 - 17:30 CET</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Official Newsletter</h3>
+                    <p class="footer-newsletter-text">
+                        Subscribe to receive official communiques, tournament schedules, and press releases directly to your inbox.
+                    </p>
+                    <form class="footer-newsletter-form" onsubmit="event.preventDefault();">
+                        <div class="newsletter-input-group">
+                            <input type="email" placeholder="Your official email address..." required aria-label="Email address">
+                            <button type="submit" class="btn btn-primary btn-newsletter" aria-label="Subscribe">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2026 International Sports Federation. All rights reserved.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <span class="divider">|</span>
+                    <a href="#">Terms of Service</a>
+                    <span class="divider">|</span>
+                    <a href="#">Cookie Settings</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Modal Overlay -->
+    <div class="search-modal" id="searchModal" aria-hidden="true">
+        <div class="search-modal-backdrop" id="searchBackdrop"></div>
+        <div class="search-modal-dialog">
+            <div class="search-modal-header">
+                <span class="search-modal-title"><i class="fa-solid fa-magnifying-glass"></i> Search Federation Portal</span>
+                <button class="search-modal-close" id="searchCloseBtn" aria-label="Close search">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <form class="search-modal-form" onsubmit="event.preventDefault();">
+                <div class="search-input-wrapper">
+                    <input type="text" id="searchInput" placeholder="Search tournaments, athletes, rules, news..." autocomplete="off">
+                    <button type="submit" aria-label="Submit search"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </form>
+            <div class="search-quick-tags">
+                <span class="quick-tags-label">Popular Searches:</span>
+                <div class="quick-tags-list">
+                    <a href="#">World Championship 2026</a>
+                    <a href="#">World Rankings</a>
+                    <a href="#">Anti-Doping Regulations</a>
+                    <a href="#">Rulebook</a>
+                    <a href="#">Executive Board</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitions & World Rankings - International Sports Federation</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- 1. Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="top-bar-actions">
+                <a href="#" class="lang-switch">TR</a>
+                <span class="divider">|</span>
+                <a href="#" class="login-link"><i class="fa-solid fa-user"></i> Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. Main Header & Navbar -->
+    <header class="main-header">
+        <div class="container header-inner">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div class="logo-text">
+                    <strong>INT. SPORTS</strong>
+                    <span>FEDERATION</span>
+                </div>
+            </a>
+
+            <!-- Navigation -->
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="competitions.html" class="active">Competitions <i class="fa-solid fa-chevron-down fa-sm"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="competitions.html">Calendar & Events</a></li>
+                            <li><a href="competitions.html#rankings">World Rankings</a></li>
+                            <li><a href="competitions.html#rules">Rules & Regulations</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="about.html">Federation <i class="fa-solid fa-chevron-down fa-sm"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About & History</a></li>
+                            <li><a href="about.html#leadership">Executive Board</a></li>
+                            <li><a href="about.html#governance">Governance & Integrity</a></li>
+                            <li><a href="about.html#members">Member Associations</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="news.html">News & Media <i class="fa-solid fa-chevron-down fa-sm"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="news.html">Latest Stories</a></li>
+                            <li><a href="news.html#press">Press Releases</a></li>
+                            <li><a href="news.html#resources">Media Resources</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <div class="header-search">
+                    <button id="searchOpenBtn" aria-label="Open Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header Banner / Breadcrumbs -->
+    <section class="page-hero">
+        <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="bc-sep"><i class="fa-solid fa-chevron-right fa-xs"></i></span>
+                <span>Competitions</span>
+                <span class="bc-sep"><i class="fa-solid fa-chevron-right fa-xs"></i></span>
+                <span class="bc-current">Calendar & World Rankings</span>
+            </nav>
+            <h1 class="page-title">Competitions & Rankings</h1>
+            <p class="page-lead">
+                Official calendar of world and continental championships, live stream broadcasts, tournament results, and global world rankings.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Section 1: Championship Calendar & Interactive Filter -->
+        <section class="competitions-calendar-section" id="calendar">
+            <div class="container">
+                <div class="calendar-top-bar">
+                    <div>
+                        <span class="section-tag">Official Schedule</span>
+                        <h2 class="section-title">Championships Calendar (2026–2027)</h2>
+                    </div>
+
+                    <!-- Filter Buttons -->
+                    <div class="filter-group" id="compFilters">
+                        <button class="filter-btn active" data-filter="all">All Events</button>
+                        <button class="filter-btn filter-live" data-filter="live">
+                            <span class="live-dot"></span> Live Now
+                        </button>
+                        <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                        <button class="filter-btn" data-filter="completed">Completed</button>
+                    </div>
+                </div>
+
+                <!-- Competitions Grid -->
+                <div class="competitions-grid" id="competitionsGrid">
+                    <!-- Competition Card 1: LIVE NOW -->
+                    <article class="comp-card" data-category="live">
+                        <div class="comp-header">
+                            <span class="comp-status status-live">
+                                <span class="pulse-indicator"></span> LIVE NOW
+                            </span>
+                            <span class="comp-dates"><i class="fa-regular fa-calendar-days"></i> Oct 20 – Oct 28, 2026</span>
+                        </div>
+                        <div class="comp-body">
+                            <span class="comp-badge-discipline">World Championship • Tier 1</span>
+                            <h3 class="comp-title">World Men's & Women's Championship 2026</h3>
+                            <div class="comp-meta">
+                                <span><i class="fa-solid fa-location-dot"></i> Arena de Genève, Geneva, Switzerland</span>
+                                <span><i class="fa-solid fa-satellite-dish"></i> Global Broadcast (Session 14 In Progress)</span>
+                            </div>
+                        </div>
+                        <div class="comp-footer">
+                            <a href="#" class="btn btn-live-stream"><i class="fa-solid fa-circle-play"></i> Watch Live Stream</a>
+                            <a href="#" class="btn btn-outline-dark"><i class="fa-solid fa-table-list"></i> Live Scores & Standings</a>
+                        </div>
+                    </article>
+
+                    <!-- Competition Card 2: UPCOMING -->
+                    <article class="comp-card" data-category="upcoming">
+                        <div class="comp-header">
+                            <span class="comp-status status-upcoming">UPCOMING</span>
+                            <span class="comp-dates"><i class="fa-regular fa-calendar-days"></i> Nov 15 – Nov 20, 2026</span>
+                        </div>
+                        <div class="comp-body">
+                            <span class="comp-badge-discipline">Continental Tour • Division A & B</span>
+                            <h3 class="comp-title">European Championship Finals 2026</h3>
+                            <div class="comp-meta">
+                                <span><i class="fa-solid fa-location-dot"></i> O2 Universum Arena, Prague, Czech Republic</span>
+                                <span><i class="fa-solid fa-ticket"></i> Ticket Sales Phase 2 Open</span>
+                            </div>
+                        </div>
+                        <div class="comp-footer">
+                            <a href="#" class="btn btn-primary"><i class="fa-solid fa-ticket"></i> Buy Tickets</a>
+                            <a href="#" class="btn btn-outline-dark"><i class="fa-solid fa-calendar-day"></i> Schedule & Draw</a>
+                        </div>
+                    </article>
+
+                    <!-- Competition Card 3: UPCOMING -->
+                    <article class="comp-card" data-category="upcoming">
+                        <div class="comp-header">
+                            <span class="comp-status status-upcoming">UPCOMING</span>
+                            <span class="comp-dates"><i class="fa-regular fa-calendar-days"></i> Dec 04 – Dec 10, 2026</span>
+                        </div>
+                        <div class="comp-body">
+                            <span class="comp-badge-discipline">Youth & Junior Circuit</span>
+                            <h3 class="comp-title">Pan-American Junior Invitational Cup 2026</h3>
+                            <div class="comp-meta">
+                                <span><i class="fa-solid fa-location-dot"></i> Olympic Oval, Calgary, Canada</span>
+                                <span><i class="fa-solid fa-users"></i> 24 National Squads Registered</span>
+                            </div>
+                        </div>
+                        <div class="comp-footer">
+                            <a href="#" class="btn btn-primary"><i class="fa-solid fa-ticket"></i> Tickets & Info</a>
+                            <a href="#" class="btn btn-outline-dark"><i class="fa-solid fa-list-check"></i> Qualified Teams</a>
+                        </div>
+                    </article>
+
+                    <!-- Competition Card 4: COMPLETED -->
+                    <article class="comp-card" data-category="completed">
+                        <div class="comp-header">
+                            <span class="comp-status status-completed">COMPLETED</span>
+                            <span class="comp-dates"><i class="fa-regular fa-calendar-days"></i> Sep 12 – Sep 18, 2026</span>
+                        </div>
+                        <div class="comp-body">
+                            <span class="comp-badge-discipline">Regional Masters</span>
+                            <h3 class="comp-title">Pacific-Asia Continental Championship 2026</h3>
+                            <div class="comp-meta">
+                                <span><i class="fa-solid fa-location-dot"></i> Gangneung Olympic Center, Gangwon, South Korea</span>
+                                <span><i class="fa-solid fa-trophy"></i> Gold: Sweden | Silver: Japan | Bronze: Canada</span>
+                            </div>
+                        </div>
+                        <div class="comp-footer">
+                            <a href="#" class="btn btn-outline-dark"><i class="fa-solid fa-medal"></i> View Final Podium</a>
+                            <a href="#" class="btn btn-outline-dark"><i class="fa-solid fa-file-lines"></i> Full Results Archive</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Official World Rankings Table -->
+        <section class="rankings-section" id="rankings">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-tag">Global Standings</span>
+                        <h2 class="section-title">Official World Rankings</h2>
+                    </div>
+                    <span class="rank-update-note"><i class="fa-solid fa-clock-rotate-left"></i> Updated: October 2026</span>
+                </div>
+
+                <!-- Ranking Category Tabs -->
+                <div class="ranking-tabs" id="rankingTabs">
+                    <button class="rank-tab-btn active" data-target="mens">Men's National Teams</button>
+                    <button class="rank-tab-btn" data-target="womens">Women's National Teams</button>
+                    <button class="rank-tab-btn" data-target="mixed">Mixed Doubles</button>
+                </div>
+
+                <!-- Rankings Table -->
+                <div class="rankings-table-wrap">
+                    <table class="rankings-table">
+                        <thead>
+                            <tr>
+                                <th class="th-rank">Rank</th>
+                                <th class="th-nation">Nation / Member Association</th>
+                                <th class="th-zone">Zone</th>
+                                <th class="th-points">Points</th>
+                                <th class="th-change">Change</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rankingsBody">
+                            <!-- Rank 1 -->
+                            <tr class="rank-podium rank-gold">
+                                <td class="td-rank">
+                                    <span class="rank-badge gold"><i class="fa-solid fa-trophy"></i> 1</span>
+                                </td>
+                                <td class="td-nation">
+                                    <div class="nation-cell">
+                                        <span class="nation-flag">🇸🇪</span>
+                                        <strong>Sweden</strong>
+                                        <span class="nation-code">(SWE)</span>
+                                    </div>
+                                </td>
+                                <td class="td-zone">Europe</td>
+                                <td class="td-points"><strong>1,240.50</strong></td>
+                                <td class="td-change"><span class="change-badge same">—</span></td>
+                            </tr>
+
+                            <!-- Rank 2 -->
+                            <tr class="rank-podium rank-silver">
+                                <td class="td-rank">
+                                    <span class="rank-badge silver"><i class="fa-solid fa-medal"></i> 2</span>
+                                </td>
+                                <td class="td-nation">
+                                    <div class="nation-cell">
+                                        <span class="nation-flag">🇨🇦</span>
+                                        <strong>Canada</strong>
+                                        <span class="nation-code">(CAN)</span>
+                                    </div>
+                                </td>
+                                <td class="td-zone">Pan-America</td>
+                                <td class="td-points"><strong>1,180.20</strong></td>
+                                <td class="td-change"><span class="change-badge up"><i class="fa-solid fa-arrow-up"></i> +1</span></td>
+                            </tr>
+
+                            <!-- Rank 3 -->
+                            <tr class="rank-podium rank-bronze">
+                                <td class="td-rank">
+                                    <span class="rank-badge bronze"><i class="fa-solid fa-medal"></i> 3</span>
+                                </td>
+                                <td class="td-nation">
+                                    <div class="nation-cell">
+                                        <span class="nation-flag">🇨🇭</span>
+                                        <strong>Switzerland</strong>
+                                        <span class="nation-code">(SUI)</span>
+                                    </div>
+                                </td>
+                                <td class="td-zone">Europe</td>
+                                <td class="td-points"><strong>1,120.00</strong></td>
+                                <td class="td-change"><span class="change-badge down"><i class="fa-solid fa-arrow-down"></i> -1</span></td>
+                            </tr>
+
+                            <!-- Rank 4 -->
+                            <tr>
+                                <td class="td-rank">
+                                    <span class="rank-badge standard">4</span>
+                                </td>
+                                <td class="td-nation">
+                                    <div class="nation-cell">
+                                        <span class="nation-flag">🇬🇧</span>
+                                        <strong>Great Britain</strong>
+                                        <span class="nation-code">(GBR)</span>
+                                    </div>
+                                </td>
+                                <td class="td-zone">Europe</td>
+                                <td class="td-points"><strong>985.40</strong></td>
+                                <td class="td-change"><span class="change-badge same">—</span></td>
+                            </tr>
+
+                            <!-- Rank 5 -->
+                            <tr>
+                                <td class="td-rank">
+                                    <span class="rank-badge standard">5</span>
+                                </td>
+                                <td class="td-nation">
+                                    <div class="nation-cell">
+                                        <span class="nation-flag">🇺🇸</span>
+                                        <strong>United States</strong>
+                                        <span class="nation-code">(USA)</span>
+                                    </div>
+                                </td>
+                                <td class="td-zone">Pan-America</td>
+                                <td class="td-points"><strong>940.80</strong></td>
+                                <td class="td-change"><span class="change-badge up"><i class="fa-solid fa-arrow-up"></i> +2</span></td>
+                            </tr>
+
+                            <!-- Rank 6 -->
+                            <tr>
+                                <td class="td-rank">
+                                    <span class="rank-badge standard">6</span>
+                                </td>
+                                <td class="td-nation">
+                                    <div class="nation-cell">
+                                        <span class="nation-flag">🇳🇴</span>
+                                        <strong>Norway</strong>
+                                        <span class="nation-code">(NOR)</span>
+                                    </div>
+                                </td>
+                                <td class="td-zone">Europe</td>
+                                <td class="td-points"><strong>895.10</strong></td>
+                                <td class="td-change"><span class="change-badge down"><i class="fa-solid fa-arrow-down"></i> -1</span></td>
+                            </tr>
+
+                            <!-- Rank 7 -->
+                            <tr>
+                                <td class="td-rank">
+                                    <span class="rank-badge standard">7</span>
+                                </td>
+                                <td class="td-nation">
+                                    <div class="nation-cell">
+                                        <span class="nation-flag">🇯🇵</span>
+                                        <strong>Japan</strong>
+                                        <span class="nation-code">(JPN)</span>
+                                    </div>
+                                </td>
+                                <td class="td-zone">Asia-Pacific</td>
+                                <td class="td-points"><strong>840.60</strong></td>
+                                <td class="td-change"><span class="change-badge up"><i class="fa-solid fa-arrow-up"></i> +1</span></td>
+                            </tr>
+
+                            <!-- Rank 8 -->
+                            <tr>
+                                <td class="td-rank">
+                                    <span class="rank-badge standard">8</span>
+                                </td>
+                                <td class="td-nation">
+                                    <div class="nation-cell">
+                                        <span class="nation-flag">🇮🇹</span>
+                                        <strong>Italy</strong>
+                                        <span class="nation-code">(ITA)</span>
+                                    </div>
+                                </td>
+                                <td class="td-zone">Europe</td>
+                                <td class="td-points"><strong>812.00</strong></td>
+                                <td class="td-change"><span class="change-badge down"><i class="fa-solid fa-arrow-down"></i> -2</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Official Rulebook & Technical Regulations -->
+        <section class="rules-section" id="rules">
+            <div class="container">
+                <div class="section-header">
+                    <div>
+                        <span class="section-tag">Technical Standards</span>
+                        <h2 class="section-title">Official Rulebooks & Equipment Specifications</h2>
+                    </div>
+                </div>
+
+                <div class="docs-grid">
+                    <!-- Rule Doc 1 -->
+                    <div class="doc-card">
+                        <div class="doc-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+                        <div class="doc-content">
+                            <span class="doc-type">Official Rules</span>
+                            <h3 class="doc-title">The Complete Rules of Play (2026–2028)</h3>
+                            <p class="doc-desc">Official championship rules, officiating procedures, timing regulations, and team composition laws.</p>
+                            <div class="doc-meta">
+                                <span>PDF • 4.8 MB</span>
+                                <a href="#" class="btn-doc-download"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rule Doc 2 -->
+                    <div class="doc-card">
+                        <div class="doc-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                        <div class="doc-content">
+                            <span class="doc-type">Specifications</span>
+                            <h3 class="doc-title">Equipment & Uniform Technical Guidelines</h3>
+                            <p class="doc-desc">Certification guidelines for stones, footwear, team uniforms, sponsor patch restrictions, and ice markings.</p>
+                            <div class="doc-meta">
+                                <span>PDF • 3.2 MB</span>
+                                <a href="#" class="btn-doc-download"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rule Doc 3 -->
+                    <div class="doc-card">
+                        <div class="doc-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+                        <div class="doc-content">
+                            <span class="doc-type">Hosting Manual</span>
+                            <h3 class="doc-title">Championship Host City Bid Handbook</h3>
+                            <p class="doc-desc">Facility requirements, lighting, TV broadcasting infrastructure, and financial obligations for host federations.</p>
+                            <div class="doc-meta">
+                                <span>PDF • 6.5 MB</span>
+                                <a href="#" class="btn-doc-download"><i class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 8. Mega Footer -->
+    <footer class="mega-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: About & Logo -->
+                <div class="footer-col footer-about">
+                    <a href="index.html" class="footer-logo">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <div class="logo-text">
+                            <strong>INT. SPORTS</strong>
+                            <span>FEDERATION</span>
+                        </div>
+                    </a>
+                    <p class="footer-desc">
+                        The world governing body committed to fostering athletic integrity, youth development, and global sporting championships across all disciplines.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="X Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Governance & Rules</h3>
+                    <ul class="footer-links">
+                        <li><a href="competitions.html#rules"><i class="fa-solid fa-angle-right"></i> Official Rulebook</a></li>
+                        <li><a href="competitions.html#rankings"><i class="fa-solid fa-angle-right"></i> World Rankings</a></li>
+                        <li><a href="about.html#governance"><i class="fa-solid fa-angle-right"></i> Anti-Doping Regulations</a></li>
+                        <li><a href="about.html#leadership"><i class="fa-solid fa-angle-right"></i> Executive Board</a></li>
+                        <li><a href="about.html#governance"><i class="fa-solid fa-angle-right"></i> Annual Reports</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Info -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Headquarters</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>Maison du Sport International, Av. de Rhodanie 54, Lausanne, Switzerland</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+41 21 612 34 56</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>contact@sportsfederation.org</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-clock"></i>
+                            <span>Mon - Fri: 08:30 - 17:30 CET</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Official Newsletter</h3>
+                    <p class="footer-newsletter-text">
+                        Subscribe to receive official communiques, tournament schedules, and press releases directly to your inbox.
+                    </p>
+                    <form class="footer-newsletter-form" onsubmit="event.preventDefault();">
+                        <div class="newsletter-input-group">
+                            <input type="email" placeholder="Your official email address..." required aria-label="Email address">
+                            <button type="submit" class="btn btn-primary btn-newsletter" aria-label="Subscribe">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2026 International Sports Federation. All rights reserved.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <span class="divider">|</span>
+                    <a href="#">Terms of Service</a>
+                    <span class="divider">|</span>
+                    <a href="#">Cookie Settings</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Search Modal Overlay -->
+    <div class="search-modal" id="searchModal" aria-hidden="true">
+        <div class="search-modal-backdrop" id="searchBackdrop"></div>
+        <div class="search-modal-dialog">
+            <div class="search-modal-header">
+                <span class="search-modal-title"><i class="fa-solid fa-magnifying-glass"></i> Search Federation Portal</span>
+                <button class="search-modal-close" id="searchCloseBtn" aria-label="Close search">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <form class="search-modal-form" onsubmit="event.preventDefault();">
+                <div class="search-input-wrapper">
+                    <input type="text" id="searchInput" placeholder="Search tournaments, athletes, rules, news..." autocomplete="off">
+                    <button type="submit" aria-label="Submit search"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </form>
+            <div class="search-quick-tags">
+                <span class="quick-tags-label">Popular Searches:</span>
+                <div class="quick-tags-list">
+                    <a href="#">World Championship 2026</a>
+                    <a href="#">World Rankings</a>
+                    <a href="#">Anti-Doping Regulations</a>
+                    <a href="#">Rulebook</a>
+                    <a href="#">Executive Board</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+

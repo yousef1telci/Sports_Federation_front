@@ -43,26 +43,40 @@
             <!-- Navigation -->
             <nav class="main-nav">
                 <ul class="nav-list">
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li class="dropdown">
-                        <a href="#">Sports <i class="fa-solid fa-chevron-down fa-sm"></i></a>
+                        <a href="competitions.html">Competitions <i class="fa-solid fa-chevron-down fa-sm"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Football</a></li>
-                            <li><a href="#">Basketball</a></li>
-                            <li><a href="#">Athletics</a></li>
-                            <li><a href="#">Swimming</a></li>
+                            <li><a href="competitions.html">Calendar & Events</a></li>
+                            <li><a href="competitions.html#rankings">World Rankings</a></li>
+                            <li><a href="competitions.html#rules">Rules & Regulations</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Media Center</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="about.html">Federation <i class="fa-solid fa-chevron-down fa-sm"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html">About & History</a></li>
+                            <li><a href="about.html#leadership">Executive Board</a></li>
+                            <li><a href="about.html#governance">Governance & Integrity</a></li>
+                            <li><a href="about.html#members">Member Associations</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="news.html">News & Media <i class="fa-solid fa-chevron-down fa-sm"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="news.html">Latest Stories</a></li>
+                            <li><a href="news.html#press">Press Releases</a></li>
+                            <li><a href="news.html#resources">Media Resources</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
 
             <!-- Header Actions -->
             <div class="header-actions">
                 <div class="header-search">
-                    <button aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button id="searchOpenBtn" aria-label="Open Search"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
                 <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
                     <i class="fa-solid fa-bars"></i>
@@ -391,6 +405,35 @@
             </div>
         </div>
     </footer>
+
+    <!-- Search Modal Overlay -->
+    <div class="search-modal" id="searchModal" aria-hidden="true">
+        <div class="search-modal-backdrop" id="searchBackdrop"></div>
+        <div class="search-modal-dialog">
+            <div class="search-modal-header">
+                <span class="search-modal-title"><i class="fa-solid fa-magnifying-glass"></i> Search Federation Portal</span>
+                <button class="search-modal-close" id="searchCloseBtn" aria-label="Close search">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <form class="search-modal-form" onsubmit="event.preventDefault();">
+                <div class="search-input-wrapper">
+                    <input type="text" id="searchInput" placeholder="Search tournaments, athletes, rules, news..." autocomplete="off">
+                    <button type="submit" aria-label="Submit search"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </form>
+            <div class="search-quick-tags">
+                <span class="quick-tags-label">Popular Searches:</span>
+                <div class="quick-tags-list">
+                    <a href="#">World Championship 2026</a>
+                    <a href="#">World Rankings</a>
+                    <a href="#">Anti-Doping Regulations</a>
+                    <a href="#">Rulebook</a>
+                    <a href="#">Executive Board</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Main JS -->
     <script src="assets/js/script.js"></script>

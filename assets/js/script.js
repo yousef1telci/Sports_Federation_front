@@ -8,6 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainNav = document.querySelector('.main-nav');
     const dropdownItems = document.querySelectorAll('.dropdown');
 
+    // Search Modal Elements
+    const searchOpenBtn = document.getElementById('searchOpenBtn');
+    const searchCloseBtn = document.getElementById('searchCloseBtn');
+    const searchModal = document.getElementById('searchModal');
+    const searchBackdrop = document.getElementById('searchBackdrop');
+    const searchInput = document.getElementById('searchInput');
+
     // 1. Mobile Menu Toggle (Hamburger / Close)
     if (mobileMenuBtn && mainNav) {
         mobileMenuBtn.addEventListener('click', () => {
@@ -74,5 +81,91 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             mobileMenuBtn.setAttribute('aria-expanded', 'false');
         }
+    }
+
+    // ==========================================================================
+    // 5. Interactive Search Modal
+    // ==========================================================================
+    function openSearch() {
+        if (searchModal) {
+            searchModal.classList.add('active');
+            searchModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            setTimeout(() => {
+                if (searchInput) searchInput.focus();
+            }, 100);
+        }
+    }
+
+    function closeSearch() {
+        if (searchModal) {
+            searchModal.classList.remove('active');
+            searchModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+    }
+
+    if (searchOpenBtn) {
+        searchOpenBtn.addEventListener('click', openSearch);
+    }
+
+    if (searchCloseBtn) {
+        searchCloseBtn.addEventListener('click', closeSearch);
+    }
+
+    if (searchBackdrop) {
+        searchBackdrop.addEventListener('click', closeSearch);
+    }
+
+    // Close on Escape key press
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && searchModal && searchModal.classList.contains('active')) {
+            closeSearch();
+        }
+    });
+
+    // ==========================================================================
+    // 6. Competitions Calendar Filter (Live / Upcoming / Completed)
+    // ==========================================================================
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const compCards = document.querySelectorAll('.comp-card');
+
+    if (filterButtons.length > 0 && compCards.length > 0) {
+        filterButtons.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                // Update active button state
+                filterButtons.forEach((b) => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const selectedFilter = btn.getAttribute('data-filter');
+
+                compCards.forEach((card) => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (selectedFilter === 'all' || cardCategory === selectedFilter) {
+                        card.style.display = 'block';
+                        card.style.opacity = '0';
+                        setTimeout(() => {
+                            card.style.transition = 'opacity 0.3s ease';
+                            card.style.opacity = '1';
+                        }, 20);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
+
+    // ==========================================================================
+    // 7. World Rankings Category Tabs
+    // ==========================================================================
+    const rankTabs = document.querySelectorAll('.rank-tab-btn');
+    if (rankTabs.length > 0) {
+        rankTabs.forEach((tab) => {
+            tab.addEventListener('click', () => {
+                rankTabs.forEach((t) => t.classList.remove('active'));
+                tab.classList.add('active');
+            });
+        });
     }
 });
